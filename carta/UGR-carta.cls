@@ -42,7 +42,7 @@
 \clearpairofpagestyles
 
 \ihead{
-  \includegraphics[width=0.4\textwidth]{logo-ugr-horizontal}
+  \hspace{-10pt}\includegraphics[height=4\baselineskip]{logo-ugr-horizontal}
 }
 % \chead{\pagemark}
 \ohead{\upshape \printNombre \\ \printCargo \\\printDepartamento \\ \printCentro}
@@ -67,7 +67,7 @@
   \renewcommand{\marcaAgua}{marca-agua-logo-ugr}
   \renewcommand{\accentColor}{ugrGray}
   \ihead{
-    \includegraphics[width=0.4\textwidth]{logo-ugr-horizontal-monocromo}
+\hspace{-10pt}\includegraphics[height=4\baselineskip]{logo-ugr-horizontal-monocromo}
   }
 }
 
@@ -75,7 +75,7 @@
   \renewcommand{\marcaAgua}{marca-agua-logo-ugr-color}
   \renewcommand{\accentColor}{ugr}
   \ihead{
-    \includegraphics[width=0.4\textwidth]{logo-ugr-horizontal-color-corporativo}
+\hspace{-10pt}\includegraphics[height=4\baselineskip]{logo-ugr-horizontal-color-corporativo}
   }
 }
 
@@ -157,8 +157,8 @@
   \graphicspath{{img/}{logos/}}
 
 \RequirePackage{xcolor}
-  \definecolor{ugr}{RGB}{190, 57, 63} % {210, 47, 61}
-  \definecolor{ugrDark}{RGB}{190, 57, 63}
+  \definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
+  \definecolor{ugrDark}{RGB}{233, 44, 48}
   \definecolor{ugrText}{RGB}{26, 25, 25}
   \definecolor{ugrGray}{RGB}{99, 100, 99}
   \newcommand{\alert}[1]{\textcolor{ugr}{#1}}
@@ -198,20 +198,24 @@
 \AtBeginDocument{
   \thispagestyle{scrheadings}
 % Bloque de remitente y destinatario. 
-\vspace*{-19mm}\noindent{\color{\accentColor}\rule{36mm}{0.5pt}}
+\vspace*{-15mm}\noindent{\color{\accentColor}\rule{40mm}{0.5pt}}
 \par\vspace{-2mm}
 \begin{minipage}[t]{36mm}
+  \begin{small}
   \textbf{\printNombre} \\ 
   \textit{\printCargo} \\
-  \printDepartamento \\ 
-  \printCentro
+  {\printDepartamento} \\ 
+  {\printCentro}
+  \end{small}
 \end{minipage}%
 \hspace{0.2\linewidth}
 \begin{minipage}[t]{0.3\linewidth}
-  \textbf{\printdesNombre}\\
-  \printdesDireccion \\
+  \begin{small}
+  \MakeUppercase{\printdesNombre}\\
+  \MakeUppercase{\printdesDireccion} \\
   \printdesCP, \printdesPoblacion \\
   \printdesPais
+  \end{small}
 \end{minipage}
 \vspace{25mm}
 
