@@ -157,8 +157,8 @@
   \graphicspath{{img/}{logos/}}
 
 \RequirePackage{xcolor}
-  \definecolor{ugr}{RGB}{190, 57, 63} % {210, 47, 61}
-  \definecolor{ugrDark}{RGB}{190, 57, 63}
+  \definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
+  \definecolor{ugrDark}{RGB}{233, 44, 48}
   \definecolor{ugrText}{RGB}{26, 25, 25}
   \definecolor{ugrGray}{RGB}{99, 100, 99}
   \newcommand{\alert}[1]{\textcolor{ugr}{#1}}
