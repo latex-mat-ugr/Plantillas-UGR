@@ -1,0 +1,42 @@
+% !TEX program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% Plantilla examen UGR
+% Francisco Torralbo Torralbo, ftorralbo@ugr.es
+
+%\documentclass[monocromo, marcaagua, bandapie, copyright]{UGR-examen}
+
+\documentclass[$opciones$]{UGR-examen}
+
+% -------------------------------------------------------------------
+% INFORMACIÓN DEL DOCUMENTO
+% -------------------------------------------------------------------
+
+% Datos del examen
+\Grado{$grado$}
+\Departamento{$departamento$}
+\Asignatura{$asignatura$}
+\CursoAcademico{$curso$}
+\Convocatoria{$convocatoria$}
+\Fecha{$fecha$}
+\Instrucciones{$instrucciones$}
+
+
+% Metadatos del archivo pdf generado
+\hypersetup{%
+  pdfsubject={Examen \printConvocatoria, \printGrado, \textcopyright Universidad de Granada},%
+	pdfkeywords={examen, Universidad de Granada},%
+}
+
+% La siguiente definición arregla un problema de conversión con pandoc.
+% Ver https://tex.stackexchange.com/questions/257418/error-tightlist-converting-md-file-into-pdf-using-pandoc
+\def\tightlist{}
+\begin{document}
+
+$body$
+
+% Se puede usar el comando
+% \printInstrucciones
+% para imprimir las instrucciones del examen donde se requirea. En dicho caso, usar la opción `noInstrucciones` para que la clase no imprima las instrucciones al final de la última página del examen.
+
+\end{document}
