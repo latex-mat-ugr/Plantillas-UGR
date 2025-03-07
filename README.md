@@ -84,6 +84,7 @@ Ver ejemplo [`carta.tex`](carta/carta.tex).
 - `bandapie`: muestra una franja de color en el borde inferior del documento.
 - `noInstrucciones`: No imprime las instrucciones del examen en el pie de la última página. Se puede usar alternativamente el comando `\printInstrucciones` donde se desee que aparezcan las instrucciones.
 - `copyright`: Añade una marca de agua en todas las páginas con el texto *"(c) Universidad de Granada"*. Útil para publicar los examenes en PRADO.
+- `dislexia`: Usa la fuente [Atkinson hyperlegible](https://www.brailleinstitute.org/freefont/)
 
 **Variables de la clase**
 

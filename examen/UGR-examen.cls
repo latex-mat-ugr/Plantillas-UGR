@@ -1,5 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{UGR-examen}[2023/06/15 Clase de documento genérico siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada] 
+\ProvidesClass{UGR-examen}[2024/03/07 Clase de documento para examen siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada] 
 
 
 
@@ -61,6 +62,11 @@
 \def\boolCopyright{0}
 \DeclareOption{copyright}{
   \def\boolCopyright{1}
+}
+
+\def\booldislexia{0}
+\DeclareOption{dislexia}{
+  \def\booldislexia{1}
 }
 \ProcessOptions\relax
 
@@ -131,6 +137,28 @@
   \renewcommand{\sfdefault}{iwona} 
 }
 \RequirePackage{inconsolata}
+\if\booldislexia0
+  \RequirePackage[theoremfont,largesc,tighter,p,osf]{newpxtext}
+  \RequirePackage[noamssymbols]{newpxmath}
+
+  % Clon de Gill Sans
+  \IfFileExists{cabin.sty}{
+    \RequirePackage[scaled=.95,type1]{cabin} 
+  } %else
+  {
+    % Si cabin da ERROR usar el siguiente comando en su lugar
+    \renewcommand{\sfdefault}{iwona} 
+  }
+  \RequirePackage{inconsolata}
+    \useosf % old-style figures in text, not in math
+    \linespread{1.05} % Palatino needs more leading (space between lines)
+\else
+  \RequirePackage{cmbright}
+  \renewcommand*\sfdefault{cmss}
+  \renewcommand*\ttdefault{cmtt}
+  \RequirePackage[sfdefault]{atkinson}
+\fi
+
 
 \RequirePackage{setspace}
 
