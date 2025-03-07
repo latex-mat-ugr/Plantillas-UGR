@@ -101,7 +101,14 @@
 \RequirePackage[english, spanish, es-nodecimaldot, es-noindentfirst, es-tabla,es-noquoting]{babel}
   \unaccentedoperators % Desactiva los acentos en los operadores matemáticso (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
 
+\RequirePackage{iftex}
+
+\ifxetex
+% No cargamos microtype pues tiene incompatibilidades con el motor xelatex
+\else
 \RequirePackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\fi
+
 \usepackage[toc,eqno,enum,bib,lineno]{tabfigures}
 
 % Las tipografías elegidas para el documento, siguiendo la guía de estilo de la UGR, son las siguientes
