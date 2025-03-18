@@ -138,9 +138,11 @@
     \useosf % old-style figures in text, not in math
     \linespread{1.05} % Palatino needs more leading (space between lines)
 \else
-  \RequirePackage{cmbright}
-  \renewcommand*\sfdefault{cmss}
-  \renewcommand*\ttdefault{cmtt}
+  \RequirePackage{euler}
+  \RequirePackage{amssymb}
+  % \RequirePackage{cmbright}
+  % \renewcommand*\sfdefault{cmss}
+  % \renewcommand*\ttdefault{cmtt}
   \RequirePackage[sfdefault]{atkinson}
 \fi
 
