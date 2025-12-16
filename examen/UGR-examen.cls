@@ -1,7 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UGR-examen}[2024/03/07 Clase de documento para examen siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada] 
-
-
+\ProvidesClass{UGR-examen}[2024/03/07 Clase de documento para examen siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada]
 
 % ===================================================================
 % Variables de la clase
@@ -69,7 +67,6 @@
 }
 \ProcessOptions\relax
 
-
 % ===================================================================
 % Clase base scrartcl
 % ===================================================================
@@ -97,15 +94,13 @@
 
 \setkomafont{title}{\itshape\large}
 
-
-
 % -------------------------------------------------------------------
 % PAQUETES Y OPCIONES
 % -------------------------------------------------------------------
-\RequirePackage[utf8]{inputenc} 
+\RequirePackage[utf8]{inputenc}
 
 \RequirePackage[english, spanish, es-nodecimaldot, es-noindentfirst, es-tabla,es-noquoting]{babel}
-  \unaccentedoperators % Desactiva los acentos en los operadores matemáticso (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
+\unaccentedoperators % Desactiva los acentos en los operadores matemáticso (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
 
 \RequirePackage{iftex}
 
@@ -118,34 +113,33 @@
 \usepackage[toc,eqno,enum,bib,lineno]{tabfigures}
 
 % Las tipografías elegidas para el documento, siguiendo la guía de estilo de la UGR, son las siguientes
-% Normal font: 			URW Palladio typeface. 
-% Sans-serif font: 	Gill Sans (paquete cabin)
-% Monospace font: 	Inconsolata
+% Normal font:       URW Palladio typeface.
+% Sans-serif font:   Gill Sans (paquete cabin)
+% Monospace font:   Inconsolata
 \RequirePackage[T1]{fontenc}
 \if\booldislexia0
-  \RequirePackage[theoremfont,largesc,tighter,p,osf]{newpxtext}
-  \RequirePackage[noamssymbols]{newpxmath}
+\RequirePackage[theoremfont,largesc,tighter,p,osf]{newpxtext}
+\RequirePackage[noamssymbols]{newpxmath}
 
-  % Clon de Gill Sans
-  \IfFileExists{cabin.sty}{
-    \RequirePackage[scaled=.95,type1]{cabin} 
-  } %else
-  {
-    % Si cabin da ERROR usar el siguiente comando en su lugar
-    \renewcommand{\sfdefault}{iwona} 
-  }
-  \RequirePackage{inconsolata}
-    \useosf % old-style figures in text, not in math
-    \linespread{1.05} % Palatino needs more leading (space between lines)
+% Clon de Gill Sans
+\IfFileExists{cabin.sty}{
+  \RequirePackage[scaled=.95,type1]{cabin}
+} %else
+{
+  % Si cabin da ERROR usar el siguiente comando en su lugar
+  \renewcommand{\sfdefault}{iwona}
+}
+\RequirePackage{inconsolata}
+\useosf % old-style figures in text, not in math
+\linespread{1.05} % Palatino needs more leading (space between lines)
 \else
-  \RequirePackage{euler}
-  \RequirePackage{amssymb}
-  % \RequirePackage{cmbright}
-  % \renewcommand*\sfdefault{cmss}
-  % \renewcommand*\ttdefault{cmtt}
-  \RequirePackage[sfdefault]{atkinson}
+\RequirePackage{euler}
+\RequirePackage{amssymb}
+% \RequirePackage{cmbright}
+% \renewcommand*\sfdefault{cmss}
+% \renewcommand*\ttdefault{cmtt}
+\RequirePackage[sfdefault]{atkinson}
 \fi
-
 
 \RequirePackage{setspace}
 
@@ -163,8 +157,8 @@
   urlcolor = [rgb]{0, 0, 0.5},  % Color de los hipervínculos
   citecolor = [rgb]{0, 0.5, 0}, % Color de las referencias bibliográficas
   pdfsubject={Examen, \textcopyright Universidad de Granada},%
-	pdfkeywords={},%
-	pdfcreator={pdfLaTeX},%
+  pdfkeywords={},%
+  pdfcreator={pdfLaTeX},%
 }
 
 % -------------------------------------------------------------------
@@ -174,16 +168,16 @@
 % \renewcommand{\arraystretch}{1.5} % Aumenta el espacio vertical entre las filas de un entorno tabular
 
 \RequirePackage{graphicx}
-  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  % Carpeta donde buscar los archivos de imagen por defecto
-  \graphicspath{{img/}{logos/}}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+% Carpeta donde buscar los archivos de imagen por defecto
+\graphicspath{{img/}{logos/}}
 
 \RequirePackage{xcolor}
-  \definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
-  \definecolor{ugrDark}{RGB}{233, 44, 48}
-  \definecolor{ugrText}{RGB}{26, 25, 25}
-  \definecolor{ugrGray}{RGB}{99, 100, 99}
-  \newcommand{\alert}[1]{\textcolor{ugr}{#1}}
+\definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
+\definecolor{ugrDark}{RGB}{233, 44, 48}
+\definecolor{ugrText}{RGB}{26, 25, 25}
+\definecolor{ugrGray}{RGB}{99, 100, 99}
+\newcommand{\alert}[1]{\textcolor{ugr}{#1}}
 
 % -------------------------------------------------------------------
 % Marca de agua
@@ -194,7 +188,7 @@
 \newcommand\AtPageLowerRight[1]{
   \put(\LenToUnit{\paperwidth-0pt},0){\llap{\raisebox{0pt}{#1}}}
   \if\boolbandapie1
-    \put(0,0){\color{\accentColor}\rule{\paperwidth}{1cm}}
+  \put(0,0){\color{\accentColor}\rule{\paperwidth}{1cm}}
   \fi
 }
 \AddToShipoutPictureBG{\AtPageLowerRight{\includegraphics[width=0.6\pdfpagewidth]{\marcaAgua}}}
@@ -207,20 +201,19 @@
 \if\boolCopyright1
 \RequirePackage{eso-pic}
 \AddToShipoutPictureBG{\AtPageLowerLeft{
-{\color{lightgray}
-  \raisebox{5em}{
-    \rotatebox[origin=l]{54}{
-      \scalebox{6.3}{\quad\copyright\ Universidad de Granada}
-    }
-  }
+    {\color{lightgray}
+      \raisebox{5em}{
+        \rotatebox[origin=l]{54}{
+          \scalebox{6.3}{\quad\copyright\ Universidad de Granada}
+        }
+      }
 }}}
 \fi
-
 
 % -------------------------------------------------------------------
 % Título
 % -------------------------------------------------------------------
-  
+
 \renewcommand{\maketitle}{
   % Bloque cabecera examen
   \vspace*{-2em}
@@ -229,23 +222,23 @@
     {\large \printConvocatoria. \printFecha}\\\medskip
     \printAsignatura. \printGrado.
   \end{center}
-  \vspace{-1em}   
-  \normalsize{Apellidos, Nombre}: \hrulefill\hrulefill\hrulefill\hrulefill\hrulefill\hrulefill Grupo: \hrulefill 
+  \vspace{-1em}
+  \normalsize{Apellidos, Nombre}: \hrulefill\hrulefill\hrulefill\hrulefill\hrulefill\hrulefill Grupo: \hrulefill
 }
 
 \AtBeginDocument{
   \maketitle\thispagestyle{scrheadings}
   % Los siguientes dos comandos hacen que todos los enumerate de segundo nivel se escriban con números romanos en minúsculas y entre paréntesis.
-  \renewcommand{\labelenumii}{\theenumii} 
+  \renewcommand{\labelenumii}{\theenumii}
   \renewcommand{\theenumii}{(\roman{enumii})}
 }
 
 \if\boolnoInstrucciones0
-  \AtEndDocument{
-    \vfill
-    {
-      \footnotesize
-      \printInstrucciones
-    }
+\AtEndDocument{
+  \vfill
+  {
+    \small\sffamily
+    \printInstrucciones
   }
+}
 \fi
