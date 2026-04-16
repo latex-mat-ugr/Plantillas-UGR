@@ -129,8 +129,13 @@ Una vez hecho esto quizá sea necesario reiniciar el equipo.
 
 Ahora crear un documento (por ejemplo `ejemplo-generico.tex`) en cualquier carpeta de nuestro equipo y copiar en él el contenido de `certificado.tex`. Editar el fichero añadiendo los datos y las opciones que creamos convenientes. Finalmente compilar el documento para ver el resultado.
 
-## TODO
-- Automatización y uso con `pandoc`
+## Uso con [Quarto](https://quarto.org) o [Pandoc](https://pandoc.org)
+
+[Pandoc](https://pandoc.org) es un conversor universal de documentos mientras que [Quarto](https://quarto.org) es un *sistema de publicación* orientado a textos científicos que usa [Pandoc](https://quarto.org/docs/authoring/markdown-basics.html) para procesar los documentos. 
+
+Ambas aplicaciones permiten transformar un documento escrito en formato [markdown](https://es.wikipedia.org/wiki/Markdown) a pdf usando LaTeX en el proceso. Esto permite usar cualquier clase de documento o paquete disponible en LaTeX para personalizar la conversión. 
+
+Junto con las clases de documento para LaTeX (`UGR-generico.cls`, `UGR-carta.cls` y `UGR-examen.cls`) se han creado plantillas (`UGR-generico-pandoc-template.tex`, `UGR-carta-pandoc-template.tex`, `UGR-examen-pandoc-template.tex`) para ser usadas con Pandoc o con Quarto. En la carpeta de cada clase están disponibles dos ficheros markdown 
 
 
 ## Algunas consideraciones sobre el diseño y los requisitos de la imagen institucional de la Universidad de Granada

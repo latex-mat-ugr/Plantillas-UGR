@@ -1,6 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UGR-generico}[2023/06/15 Clase de documento genérico siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada] 
-
+\ProvidesClass{UGR-generico}[2023/06/15 Clase de documento genérico siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada]
 
 % ===================================================================
 % Variables de la clase
@@ -86,11 +85,12 @@
 % -------------------------------------------------------------------
 % PAQUETES Y OPCIONES
 % -------------------------------------------------------------------
-\RequirePackage[utf8]{inputenc} 
+\RequirePackage[utf8]{inputenc}
 
 \RequirePackage[english, spanish, es-nodecimaldot, es-noindentfirst, es-tabla,es-noquoting]{babel}
-  \unaccentedoperators % Desactiva los acentos en los operadores matemáticso (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
+\unaccentedoperators % Desactiva los acentos en los operadores matemáticso (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
 
+\RequirePackage{iftex}
 \ifxetex
 % No cargamos microtype pues tiene incompatibilidades con el motor xelatex
 \else
@@ -100,22 +100,22 @@
 \usepackage[toc,eqno,enum,bib,lineno]{tabfigures}
 
 % Las tipografías elegidas para el documento, siguiendo la guía de estilo de la UGR, son las siguientes
-% Normal font: 			URW Palladio typeface. 
-% Sans-serif font: 	Gill Sans (paquete cabin)
-% Monospace font: 	Inconsolata
+% Normal font:       URW Palladio typeface.
+% Sans-serif font:   Gill Sans (paquete cabin)
+% Monospace font:   Inconsolata
 \RequirePackage[T1]{fontenc}
 \RequirePackage[theoremfont,largesc,tighter,p,osf]{newpxtext}
 \RequirePackage[noamssymbols]{newpxmath}
-  \useosf % old-style figures in text, not in math
-  \linespread{1.05} % Palatino needs more leading (space between lines)
+\useosf % old-style figures in text, not in math
+\linespread{1.05} % Palatino needs more leading (space between lines)
 
 % Clon de Gill Sans
 \IfFileExists{cabin.sty}{
-  \RequirePackage[scaled=.95,type1]{cabin} 
+  \RequirePackage[scaled=.95,type1]{cabin}
 } %else
 {
   % Si cabin da ERROR usar el siguiente comando en su lugar
-  \renewcommand{\sfdefault}{iwona} 
+  \renewcommand{\sfdefault}{iwona}
 }
 \RequirePackage{inconsolata}
 
@@ -136,8 +136,8 @@
   urlcolor = [rgb]{0, 0, 0.5},  % Color de los hipervínculos
   citecolor = [rgb]{0, 0.5, 0}, % Color de las referencias bibliográficas
   pdfsubject={},%
-	pdfkeywords={},%
-	pdfcreator={pdfLaTeX},%
+  pdfkeywords={},%
+  pdfcreator={pdfLaTeX},%
 }
 
 % -------------------------------------------------------------------
@@ -147,17 +147,16 @@
 % \renewcommand{\arraystretch}{1.5} % Aumenta el espacio vertical entre las filas de un entorno tabular
 
 \RequirePackage{graphicx}
-  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  % Carpeta donde buscar los archivos de imagen por defecto
-  \graphicspath{{img/}{logos/}}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+% Carpeta donde buscar los archivos de imagen por defecto
+\graphicspath{{img/}{logos/}}
 
 \RequirePackage{xcolor}
-  \definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
-  \definecolor{ugrDark}{RGB}{233, 44, 48}
-  \definecolor{ugrText}{RGB}{26, 25, 25}
-  \definecolor{ugrGray}{RGB}{99, 100, 99}
-  \newcommand{\alert}[1]{\textcolor{ugr}{#1}}
-
+\definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
+\definecolor{ugrDark}{RGB}{233, 44, 48}
+\definecolor{ugrText}{RGB}{26, 25, 25}
+\definecolor{ugrGray}{RGB}{99, 100, 99}
+\newcommand{\alert}[1]{\textcolor{ugr}{#1}}
 
 % -------------------------------------------------------------------
 % ESTILOS DE LA CLASE KOMA
