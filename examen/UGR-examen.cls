@@ -237,7 +237,7 @@
 \AtEndDocument{
   \vfill
   {
-    \small\sffamily
+    \sffamily
     \printInstrucciones
   }
 }
