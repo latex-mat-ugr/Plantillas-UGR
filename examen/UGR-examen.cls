@@ -118,6 +118,7 @@
 % Monospace font:   Inconsolata
 \RequirePackage[T1]{fontenc}
 \if\booldislexia0
+\RequirePackage{amsmath,amssymb}
 \RequirePackage[theoremfont,largesc,tighter,p,osf]{newpxtext}
 \RequirePackage[noamssymbols]{newpxmath}
 
@@ -134,7 +135,7 @@
 \linespread{1.05} % Palatino needs more leading (space between lines)
 \else
 \RequirePackage{euler}
-\RequirePackage{amssymb}
+\RequirePackage{amsmath, amssymb}
 % \RequirePackage{cmbright}
 % \renewcommand*\sfdefault{cmss}
 % \renewcommand*\ttdefault{cmtt}
