@@ -1,0 +1,100 @@
+\documentclass[spanish]{UGR-beamer}
+
+\usepackage[spanish]{babel}
+\usepackage{calc}
+
+\newenvironment{iconBlock}[2]
+{
+  \begin{minipage}[t]{1.2em}
+    \textcolor{ugr}{#1}
+  \end{minipage}%
+  \begin{minipage}[t]{\linewidth - 1.2em}
+    {\large #2}\\\smallskip
+  }
+  {
+  \end{minipage}
+}
+
+\title{Plantilla presentación UGR con un un un  título muy largo}
+\subtitle{Subtítulo}
+\author{Autor}
+\date{\today}
+
+\event{Taller \LaTeX\ creación material docente}
+\place{Granada (España)}
+\collaborators{Colaboradores}
+\fundings{Financiación}
+
+%pdf metadata
+\subject{Plantilla presentación UGR}
+\keywords{Universidad de Granada, LaTeX, Creación material docente}
+
+\begin{document}
+
+%================================================================
+\section{Primera sección}
+%----------------------------------------------------------------
+
+\begin{frame}{Título}{Subtítulo}
+
+  \begin{block}{Bloque}
+    Contenido
+  \end{block}
+
+  \begin{exampleblock}{Bloque de ejemplo}
+    Contenido
+  \end{exampleblock}
+
+  \begin{alertblock}{Bloque de atención}
+    Contenido
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Gracias por vuestra atención}{Para contactar con nosotros pueden dirigirse a:}
+
+  \begin{minipage}[t]{0.4\linewidth}
+    \begin{iconBlock}{\faMapPin}{Nombre del servicio}
+      \small
+      Dirección postal (línea 1)\\
+      Dirección postal (línea 2)\\
+      Código postal. Ciudad
+    \end{iconBlock}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.3\linewidth}
+    \begin{iconBlock}{\faEnvelope}{Correo / Web}
+      nombre@ugr.es\\
+      Nombre.ugr.es\\
+    \end{iconBlock}
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{0.3\linewidth}
+    \begin{iconBlock}{\faMobileScreenButton}{Teléfonos}
+      \small
+      (+34) 958 240 000\\
+      (+34) 958 240 000\\
+      (+34) 958 240 000
+    \end{iconBlock}
+  \end{minipage}%
+
+  % \begin{multicols}{4}
+  %   hola
+  %
+  %   \newpage
+  %
+  %   hola
+  %
+  %
+  % \end{multicols}
+\end{frame}
+
+\highlightframe{ugr}{white}{Thank you for your attention!}
+
+% Referencias
+\begin{frame}[plain, allowframebreaks]
+  \frametitle{Referencias}
+  \nocite{CMT2023}
+  % REFERENCIAS
+  \bibliographystyle{apalike2}
+  \bibliography{library}
+  %  %\addcontentsline{toc}{section}{Referencias}
+\end{frame}
+\end{document}
