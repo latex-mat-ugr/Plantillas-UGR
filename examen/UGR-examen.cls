@@ -217,7 +217,7 @@
 
 \renewcommand{\maketitle}{
   % Bloque cabecera examen
-  \vspace*{-2em}
+  \vspace*{-5em}
   \begin{center}
     \itshape
     {\large \printConvocatoria. \printFecha}\\\medskip
