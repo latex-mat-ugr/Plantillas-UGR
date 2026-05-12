@@ -1,11 +1,11 @@
-% Pesonal beamer template
+% Personal beamer template
 % Francisco Torralbo
 \NeedsTeXFormat{LaTeX2e}[2025]
 \ProvidesClass{UGR-beamer}[2026/03/19 Plantilla beamer UGR]
 
 \DeclareKeys[UGRBeamer]{
   subject.store = \UGRBeamer@subtitle,
-  keywords.store = \UGRBeamer@author,
+  author.store = \UGRBeamer@author,
   collaborators.store = \UGRBeamer@collaborators,
   fundings.store = \UGRBeamer@fundings,
   event.store = \UGRBeamer@event,
@@ -57,7 +57,7 @@
 % See https://tex.stackexchange.com/questions/621378/good-combination-of-sans-serif-font-text-and-math-mode-using-beamer-class
 % \RequirePackage{arev}
 
-\RequirePackage[nice]{nicefrac}
+\RequirePackage{nicefrac}
 
 \RequirePackage[document]{ragged2e}
 
@@ -95,7 +95,7 @@
 }
 \AtBeginSubsection[]
 {
-  \subsectionframe{\subsecname}
+  \subsectionframe{\insertsubsectionhead}
 }
 
 % \mode<presentation>
@@ -109,7 +109,7 @@
 
 \setbeamercolor{normal text}{fg=ugrText}
 % Background and foreground color for block environment
-\setbeamercolor{block body}{bg=black!05!white,fg=black}  %
+\setbeamercolor{block body}{bg=black!5!white,fg=black}  %
 \setbeamercolor{frametitle}{fg=ugr}
 \setbeamercolor{framesubtitle}{fg=ugrGray}
 \setbeamercolor{alerted text}{fg=ugr}
@@ -261,4 +261,4 @@
 %--------------------------------------------------------------
 %  Insertar al final del documento
 %--------------------------------------------------------------
-\AtEndDocument{}
+%\AtEndDocument{}

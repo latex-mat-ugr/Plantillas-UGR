@@ -99,7 +99,7 @@
 \RequirePackage[utf8]{inputenc} 
 
 \RequirePackage[english, spanish, es-nodecimaldot, es-noindentfirst, es-tabla,es-noquoting]{babel}
-  \unaccentedoperators % Desactiva los acentos en los operadores matemáticso (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
+  \unaccentedoperators % Desactiva los acentos en los operadores matemáticos (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
 
 \RequirePackage{iftex}
 
@@ -109,7 +109,7 @@
 \RequirePackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \fi
 
-\usepackage[toc,eqno,enum,bib,lineno]{tabfigures}
+\RequirePackage[toc,eqno,enum,bib,lineno]{tabfigures}
 
 % Las tipografías elegidas para el documento, siguiendo la guía de estilo de la UGR, son las siguientes
 % Normal font: 			URW Palladio typeface. 
@@ -142,14 +142,12 @@
   % hidelinks,            % Enlaces sin color ni borde. El borde no se imprime
   linkbordercolor=0.8 0 0,
   citebordercolor=0 0.8 0,
-  citebordercolor=0 0.8 0,
   colorlinks = true,            % Color en texto de los enlaces. Comentar esta línea o cambiar `true` por `false` para imprimir el documento.
   linkcolor = [rgb]{0.5, 0, 0}, % Color de los enlaces internos
   urlcolor = [rgb]{0, 0, 0.5},  % Color de los hipervínculos
   citecolor = [rgb]{0, 0.5, 0}, % Color de las referencias bibliográficas
   pdfsubject={},%
-	pdfkeywords={},%
-	pdfcreator={pdfLaTeX},%
+	pdfkeywords={}%,
 }
 
 % -------------------------------------------------------------------
@@ -186,21 +184,9 @@
 \if\boolmarcaagua1
 \RequirePackage{eso-pic}
 \newcommand\AtPageLowerRight[1]{\put(\LenToUnit{\paperwidth-0pt},0){\llap{\raisebox{0pt}{#1}}}}
-\AddToShipoutPictureBG{\AtPageLowerRight{\includegraphics[width=0.6\pdfpagewidth]{\marcaAgua}}}
+\AddToShipoutPictureBG{\AtPageLowerRight{\includegraphics[width=0.6\paperwidth]{\marcaAgua}}}
 \fi
 
-% \AtEndDocument{
-% % Para firmar el documento digitalmente, eliminar el siguiente bloque te texto.
-% \vfill\vfill
-% \begin{center}
-%   Granada, \today
-%
-%   \includegraphics[width=7cm]{img/firma}
-%
-%   \printNombre
-% \end{center}
-% \vfill
-% }
 
 \AtBeginDocument{
   \thispagestyle{scrheadings}
