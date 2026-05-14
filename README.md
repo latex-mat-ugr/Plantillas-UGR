@@ -11,7 +11,9 @@ Actualmente se han creado tres clases: `UGR-generico.cls`, `UGR-carta.cls` y `UG
 ```tex
 \documentclass[monocromo, noDatosPie]{UGR-generico}
 ```
-donde hemos cargado la clase `UGR-generico` con las opciones `monocromo` y `noDatosPie`. **Es importante respetar las mayúsculas y minúsculas al seleccionar una clase o una opción**.
+donde hemos cargado la clase `UGR-generico` con las opciones `monocromo` y `noDatosPie`. Ver la sección [Instalación y uso](#instalacion-y-uso) para más información.
+
+**Es importante respetar las mayúsculas y minúsculas al seleccionar una clase o una opción**.
 
 ### Opciones comunes
 Todas las clases creadas comparten las siguientes opciones:
@@ -100,7 +102,7 @@ Ver ejemplo [`examen.tex`](examen/examen.tex)
 
 ## Instalación y uso
 
-Hay dos formas de usar las clases. La [primera de ellas](#descargar-y-uso) es más sencilla pero requiere que copiemos tanto el fichero de clase que queramos usar ([UGR-generico.cls](generico/UGR-generico.cls), [UGR-carta.cls](carta/UGR-carta.cls) o [UGR-examen.cls](examen/UGR-examen.cls)) como los ficheros de logos ([logos/](generico/logos)) en la carpeta del documento LaTeX. [La segunda](#instalación-de-las-clases-y-logos-el-el-arbol-local-de-tex) nos permitirá usar las clases en cualquier documento LaTeX de nuestro ordenador.
+Hay dos formas de usar las clases. La [primera de ellas](#descargar-y-uso) es más sencilla pero requiere que copiemos tanto el fichero de clase que queramos usar ([UGR-generico.cls](generico/UGR-generico.cls), [UGR-carta.cls](carta/UGR-carta.cls) o [UGR-examen.cls](examen/UGR-examen.cls)) como los ficheros de logos ([logos/](generico/logos)) en la carpeta donde se encuenttre nuestro documento LaTeX. [La segunda](#instalación-de-las-clases-y-logos-el-el-arbol-local-de-tex) nos permitirá usar las clases en cualquier documento LaTeX de nuestro ordenador.
 
 ### Descargar y uso
 
@@ -108,7 +110,7 @@ En el siguiente ejemplo descargaremos las clases y crearemos un nuevo documento 
 
 1. Descarga el repositorio. Para ello pulsa el botón verde  `< > Code` y selecciona *Download ZIP*.
 2. Entra en la carpeta `generico` y crea un nuevo fichero `ejemplo-generico.tex` **en dicha carpeta**.
-3. Copia el contenido de `certificado.tex` o `informe.tex` en tu documento `ejemplo-generico.tex``.
+3. Copia el contenido de `certificado.tex` o `informe.tex` en tu documento `ejemplo-generico.tex`.
 3. Edita dicho fichero con tu editor favorito añadiendo tus datos a las variables de clase y modificando el texto del cuerpo del mensaje.
 4. Compila dicho documento mediante `pdfLaTeX`.
 
@@ -130,6 +132,8 @@ Una vez hecho esto quizá sea necesario reiniciar el equipo.
 Ahora crear un documento (por ejemplo `ejemplo-generico.tex`) en cualquier carpeta de nuestro equipo y copiar en él el contenido de `certificado.tex`. Editar el fichero añadiendo los datos y las opciones que creamos convenientes. Finalmente compilar el documento para ver el resultado.
 
 ## Uso con [Quarto](https://quarto.org) o [Pandoc](https://pandoc.org)
+
+**En preparación**. 
 
 [Pandoc](https://pandoc.org) es un conversor universal de documentos mientras que [Quarto](https://quarto.org) es un *sistema de publicación* orientado a textos científicos que usa [Pandoc](https://quarto.org/docs/authoring/markdown-basics.html) para procesar los documentos. 
 
