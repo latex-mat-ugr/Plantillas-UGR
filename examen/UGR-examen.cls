@@ -202,7 +202,7 @@
 \if\boolCopyright1
 \RequirePackage{eso-pic}
 \AddToShipoutPictureBG{\AtPageLowerLeft{
-    {\color{lightgray}
+    {\color[gray]{0.9}
       \raisebox{5em}{
         \rotatebox[origin=l]{54}{
           \scalebox{6.3}{\quad\copyright\ Universidad de Granada}
