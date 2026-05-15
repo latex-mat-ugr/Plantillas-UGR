@@ -1,6 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UGR-carta}[2023/06/15 Clase de documento genérico siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada] 
-
+\ProvidesClass{UGR-carta}[2023/06/15 Clase de documento genérico siguiendo las directrices del manual de identidad corporativa de la Universidad de Granada]
 
 % ===================================================================
 % Variables de la clase
@@ -67,7 +66,7 @@
   \renewcommand{\marcaAgua}{marca-agua-logo-ugr}
   \renewcommand{\accentColor}{ugrGray}
   \ihead{
-\hspace{-10pt}\includegraphics[height=4\baselineskip]{logo-ugr-horizontal-monocromo}
+    \hspace{-10pt}\includegraphics[height=4\baselineskip]{logo-ugr-horizontal-monocromo}
   }
 }
 
@@ -75,7 +74,7 @@
   \renewcommand{\marcaAgua}{marca-agua-logo-ugr-color}
   \renewcommand{\accentColor}{ugr}
   \ihead{
-\hspace{-10pt}\includegraphics[height=4\baselineskip]{logo-ugr-horizontal-color-corporativo}
+    \hspace{-10pt}\includegraphics[height=4\baselineskip]{logo-ugr-horizontal-color-corporativo}
   }
 }
 
@@ -96,10 +95,10 @@
 % -------------------------------------------------------------------
 % PAQUETES Y OPCIONES
 % -------------------------------------------------------------------
-\RequirePackage[utf8]{inputenc} 
+\RequirePackage[utf8]{inputenc}
 
 \RequirePackage[english, spanish, es-nodecimaldot, es-noindentfirst, es-tabla,es-noquoting]{babel}
-  \unaccentedoperators % Desactiva los acentos en los operadores matemáticos (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
+\unaccentedoperators % Desactiva los acentos en los operadores matemáticos (p.e. \lim, \max, ...). Eliminar esta opción si queremos que vayan acentuados
 
 \RequirePackage{iftex}
 
@@ -112,22 +111,22 @@
 \RequirePackage[toc,eqno,enum,bib,lineno]{tabfigures}
 
 % Las tipografías elegidas para el documento, siguiendo la guía de estilo de la UGR, son las siguientes
-% Normal font: 			URW Palladio typeface. 
-% Sans-serif font: 	Gill Sans (paquete cabin)
-% Monospace font: 	Inconsolata
+% Normal font:       URW Palladio typeface.
+% Sans-serif font:   Gill Sans (paquete cabin)
+% Monospace font:   Inconsolata
 \RequirePackage[T1]{fontenc}
 \RequirePackage[theoremfont,largesc,tighter,p,osf]{newpxtext}
 \RequirePackage[noamssymbols]{newpxmath}
-  \useosf % old-style figures in text, not in math
-  \linespread{1.05} % Palatino needs more leading (space between lines)
+\useosf % old-style figures in text, not in math
+\linespread{1.05} % Palatino needs more leading (space between lines)
 
 % Clon de Gill Sans
 \IfFileExists{cabin.sty}{
-  \RequirePackage[scaled=.95,type1]{cabin} 
+  \RequirePackage[scaled=.95,type1]{cabin}
 } %else
 {
   % Si cabin da ERROR usar el siguiente comando en su lugar
-  \renewcommand{\sfdefault}{iwona} 
+  \renewcommand{\sfdefault}{iwona}
 }
 \RequirePackage{inconsolata}
 
@@ -147,7 +146,7 @@
   urlcolor = [rgb]{0, 0, 0.5},  % Color de los hipervínculos
   citecolor = [rgb]{0, 0.5, 0}, % Color de las referencias bibliográficas
   pdfsubject={},%
-	pdfkeywords={}%,
+  pdfkeywords={}%,
 }
 
 % -------------------------------------------------------------------
@@ -157,17 +156,16 @@
 % \renewcommand{\arraystretch}{1.5} % Aumenta el espacio vertical entre las filas de un entorno tabular
 
 \RequirePackage{graphicx}
-  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
-  % Carpeta donde buscar los archivos de imagen por defecto
-  \graphicspath{{img/}{logos/}}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+% Carpeta donde buscar los archivos de imagen por defecto
+\graphicspath{{img/}{logos/}}
 
 \RequirePackage{xcolor}
-  \definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
-  \definecolor{ugrDark}{RGB}{233, 44, 48}
-  \definecolor{ugrText}{RGB}{26, 25, 25}
-  \definecolor{ugrGray}{RGB}{99, 100, 99}
-  \newcommand{\alert}[1]{\textcolor{ugr}{#1}}
-
+\definecolor{ugr}{RGB}{233, 44, 48} % {210, 47, 61}
+\definecolor{ugrDark}{RGB}{233, 44, 48}
+\definecolor{ugrText}{RGB}{26, 25, 25}
+\definecolor{ugrGray}{RGB}{99, 100, 99}
+\newcommand{\alert}[1]{\textcolor{ugr}{#1}}
 
 % -------------------------------------------------------------------
 % ESTILOS DE LA CLASE KOMA
@@ -187,30 +185,29 @@
 \AddToShipoutPictureBG{\AtPageLowerRight{\includegraphics[width=0.6\paperwidth]{\marcaAgua}}}
 \fi
 
-
 \AtBeginDocument{
   \thispagestyle{scrheadings}
-% Bloque de remitente y destinatario. 
-\vspace*{-15mm}\noindent{\color{\accentColor}\rule{40mm}{0.5pt}}
-\par\vspace{-2mm}
-\begin{minipage}[t]{36mm}
-  \begin{small}
-  \textbf{\printNombre} \\ 
-  \textit{\printCargo} \\
-  {\printDepartamento} \\ 
-  {\printCentro}
-  \end{small}
-\end{minipage}%
-\hspace{0.2\linewidth}
-\begin{minipage}[t]{0.3\linewidth}
-  \begin{small}
-  \MakeUppercase{\printdesNombre}\\
-  \MakeUppercase{\printdesDireccion} \\
-  \printdesCP, \printdesPoblacion \\
-  \printdesPais
-  \end{small}
-\end{minipage}
-\vspace{25mm}
+  % Bloque de remitente y destinatario.
+  \vspace*{-15mm}\noindent{\color{\accentColor}\rule{40mm}{0.5pt}}
+  \par\vspace{-2mm}
+  \begin{minipage}[t]{36mm}
+    \begin{small}
+      \textbf{\printNombre} \\
+      \textit{\printCargo} \\
+      {\printDepartamento} \\
+      {\printCentro}
+    \end{small}
+  \end{minipage}%
+  \hspace{0.25\linewidth}
+  \begin{minipage}[t]{0.3\linewidth}
+    \begin{small}
+      \MakeUppercase{\printdesNombre}\\
+      \MakeUppercase{\printdesDireccion} \\
+      \printdesCP, \printdesPoblacion \\
+      \printdesPais
+    \end{small}
+  \end{minipage}
+  \vspace{25mm}
 
-% -------------------------------------------
+  % -------------------------------------------
 }
