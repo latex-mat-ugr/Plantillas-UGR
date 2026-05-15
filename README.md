@@ -123,7 +123,9 @@ Es posible *instalar* tanto las clases como los logos de la UGR para que estén 
 2. Localizar la carpeta del *arbol local de TeX* ('local texmf tree'). La ubicación de esta carpeta dependerá tanto de nuestro sistema operativo como de la *distribución* de LaTeX que tengamos instalada. A continuación hay un listado de las ubicaciones habituales:
     - Linux: `~/texmf`.
     - MacOS: `~/Library/texmf/`
-    - Windows: `C:\Users\nombreUsuario\texmf`
+    - Windows:
+        - Con MikTeX hay que crear la carpeta `C:\Users\nombreUsuario\texmf` y registrarla en MikTeX Console. Para ello, abrir MikTeX Console y en el menú Settings (a la izquierda) y abrir la pestaña `directories`. Pulsar el botón `+` y añadir la ruta completa a la carpeta que hemos creado `C:\Users\nombreUsuario\texmf`.
+        - Con TeXLive: TODO
 3. Copiar los ficheros de clase ([UGR-generico.cls](generico/UGR-generico.cls), [UGR-carta.cls](carta/UGR-carta.cls) y [UGR-examen.cls](examen/UGR-examen.cls)) al subdirectorio `tex` en dicha carpeta (crear dicho directorio si no existe)
 4. Copiar los ficheros de logos ([logo-ugr-horizontal](generico/logos/logo-ugr-horizontal.pdf), [logo-ugr-horizontal-monocromo](generico/logos/logo-ugr-horizontal-monocromo.pdf), [logo-ugr-color-corporativo](generico/logos/logo-ugr-color-corporativo.pdf) [marca-agua-logo-ugr-color](generico/logos/marca-agua-logo-ugr-color.pdf) y [marca-agua-logo-ugr](generico/logos/marca-agua-logo-ugr.pdf)) en el subdirectorio `tex/images` (crear dicho directorio si no existe)
 
